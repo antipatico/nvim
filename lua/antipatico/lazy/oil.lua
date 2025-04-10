@@ -1,3 +1,5 @@
+local show_detailed_view = false
+
 return {
   "stevearc/oil.nvim",
   ---@module 'oil'
@@ -7,7 +9,9 @@ return {
   opts = {
     columns = {
       "icon",
-      "permissions",
+--      "permissions",
+--      "size",
+--      "mtime",
     },
     use_default_keymaps = false,
     keymaps = {
@@ -33,6 +37,17 @@ return {
         end,
         nowait = true,
         desc = "Find files in the current directory",
+      },
+      ["gd"] = {
+        function()
+          show_detailed_view = not show_detailed_view
+          if show_detailed_view then
+            require("oil").set_columns({"icon", "permissions", "size", "mtime"})
+          else
+            require("oil").set_columns({"icon"})
+          end
+        end,
+        desc = "Toggle detailed view",
       },
     },
     view_options = {
