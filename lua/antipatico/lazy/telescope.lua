@@ -1,3 +1,6 @@
+-- https://github.com/nvim-telescope/telescope.nvim
+-- Telescope is a powerfull fuzzy finder that allows you to find files and
+-- file content super fast with a nice UI in vim
 return {
   "nvim-telescope/telescope.nvim",
   tag = "0.1.8",

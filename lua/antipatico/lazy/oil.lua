@@ -1,3 +1,11 @@
+-- https://github.com/stevearc/oil.nvim
+-- Oil is an amazing file navigator plugin for neovim that allows you to rename,
+-- move, copy, delete and change file permissions using a text buffer. Thus,
+-- it is easy to leverage your vi motions to quickly do file operations.
+-- Moreover, it is possible to use Harpoon and save file views.
+-- It is amazing!
+
+
 local show_detailed_view = false
 
 return {
@@ -9,9 +17,6 @@ return {
   opts = {
     columns = {
       "icon",
---      "permissions",
---      "size",
---      "mtime",
     },
     use_default_keymaps = false,
     keymaps = {

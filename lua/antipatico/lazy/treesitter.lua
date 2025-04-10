@@ -1,3 +1,9 @@
+-- https://github.com/nvim-treesitter/nvim-treesitter
+-- As far as I understand, treesitter builds an AST from your code and allows
+-- other plugins to syntax highlight and work better.
+--
+-- https://github.com/nvim-treesitter/nvim-treesitter-context
+-- This plugins show you context of the function you are currently in, cool!
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -62,7 +68,7 @@ return {
         min_window_height = 0,
         line_numbers = true,
         -- Maximum number of lines to show for a single context
-        multiline_threshold = 20,
+        multiline_threshold = 10,
         -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
         trim_scope = 'outer',
         -- Line used to calculate context. Choices: 'cursor', 'topline'
