@@ -12,7 +12,7 @@ return {
   "stevearc/oil.nvim",
   ---@module 'oil'
   ---@type oil.SetupOpts
-  --tag = "v2.15.0",
+  tag = "v2.15.0",
   dependencies = { { "echasnovski/mini.icons", opts = {} } },
   opts = {
     columns = {

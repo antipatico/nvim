@@ -10,3 +10,4 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "[NVIM] Keep the cursor to the 
 vim.keymap.set("n", "n", "nzzzv", { desc = "[NVIM] Keep the cursor to the center of the buffer when searching down" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "[NVIM] Keep the cursor to the center of the buffer when seraching up" })
 vim.keymap.set("i", "<C-c>", "<Esc>", { desc = "[NVIM] Exit insert mode using CTRL+C" })
+vim.keymap.set({"n", "v"}, "<leader>td", function() vim.diagnostic.enable(false) end, { desc = "[NVIM] Toggle diagnostics" })

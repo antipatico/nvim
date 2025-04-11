@@ -30,3 +30,5 @@ vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 -- Show the color column
 vim.opt.colorcolumn = "80"
+-- Show diagnostic messages on multiple lines
+vim.diagnostic.config({ virtual_lines = true })
