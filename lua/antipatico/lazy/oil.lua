@@ -12,7 +12,7 @@ return {
   "stevearc/oil.nvim",
   ---@module 'oil'
   ---@type oil.SetupOpts
-  tag = "v2.15.0",
+  --tag = "v2.15.0",
   dependencies = { { "echasnovski/mini.icons", opts = {} } },
   opts = {
     columns = {
@@ -73,6 +73,8 @@ return {
   keys = {
     { "<leader>pv", "<cmd>Oil %:h<cr>",
       { desc = "[OIL] Project view: open file viewer in current file folder" } },
+    { "<leader>pr", "<cmd>Oil .<cr>",
+      { desc = "[OIL] Project root: open file viewer in the root of the project (CWD)" } },
   },
   -- Lazy loading not recommended
   lazy = false,
