@@ -3,6 +3,8 @@
 -- file content super fast with a nice UI in vim
 return {
   "nvim-telescope/telescope.nvim",
+  -- Load telescope after theme but before other plugins using telescope
+  priority = 8000,
   tag = "0.1.8",
   dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
