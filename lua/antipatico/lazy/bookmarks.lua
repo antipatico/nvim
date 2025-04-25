@@ -26,7 +26,7 @@ return {
     local ok, telescope = pcall(require, "telescope")
     if ok then
       telescope.load_extension("bookmarks")
-      vim.keymap.set("n", "<leader>bl", telescope.extensions.bookmarks.list(),
+      vim.keymap.set("n", "<leader>bl", telescope.extensions.bookmarks.list,
         { desc = "[BOOKMARKS] Open Telescope search (list bookmarks)" })
     end
   end,
