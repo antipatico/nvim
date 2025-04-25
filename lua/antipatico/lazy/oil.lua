@@ -33,15 +33,25 @@ return {
       ["<leader>ff"] = {
         function()
           local ok, telescope = pcall(require, "telescope.builtin")
-          if not ok then
-            -- Telesope not found
-            return
-          else
+          if ok then
             telescope.find_files({cwd = require("oil").get_current_dir()})
           end
         end,
         nowait = true,
         desc = "Find files in the current directory",
+      },
+      ["<leader>fs"] = {
+        function()
+          local ok, telescope = pcall(require, "telescope.builtin")
+          if ok then
+            telescope.grep_string({
+              search = vim.fn.input("Grep > "),
+              search_dirs = {require("oil").get_current_dir()}
+            })
+          end
+        end,
+        nowait = true,
+        desc = "Search for string in the current directory",
       },
       ["gd"] = {
         function()
