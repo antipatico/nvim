@@ -8,7 +8,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
     if ok then
       path = oil.get_current_dir()
     end
-    if args.file ~= "" then -- vim.fn.filereadable(args.file) == 1 then
+    if args.file ~= "" and args.file:sub(1, 6) ~= "oil://" then -- vim.fn.filereadable(args.file) == 1 then
       path = vim.fn.fnameescape(vim.fn.fnamemodify(args.file, ":h"))
     end
     if path ~= nil then
