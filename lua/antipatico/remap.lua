@@ -23,3 +23,12 @@ vim.keymap.set({"n", "v"}, "<leader>td", function() vim.diagnostic.enable(not vi
   { desc = "[NVIM] Toggle diagnostics" })
 vim.keymap.set("n", "<leader>vb", "Va{",
   { desc = "[NVIM] Select current block" })
+vim.keymap.set('i', '<C-Space>', function()
+  if vim.fn.pumvisible() == 1 then
+    return '<C-n>'  -- Navigate down if popup is visible
+  else
+    vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-x><C-o>', true, true, true))
+    return ''
+  end
+end, {expr = true, desc = "[NVIM] Autocomplete (omnicomplete remap)"})
+
