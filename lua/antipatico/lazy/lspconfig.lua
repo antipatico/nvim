@@ -20,5 +20,6 @@ return {
   config = function()
     local lspconfig = require('lspconfig')
     lspconfig.clangd.setup({})
+    lspconfig.basedpyright.setup({})
   end,
 }
