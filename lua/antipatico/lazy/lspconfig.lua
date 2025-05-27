@@ -21,5 +21,6 @@ return {
     local lspconfig = require('lspconfig')
     lspconfig.clangd.setup({})
     lspconfig.basedpyright.setup({})
+    lspconfig.gopls.setup({})
   end,
 }
